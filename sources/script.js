@@ -1,8 +1,8 @@
 const content = [
   {
     id: "0",
-    img: "../images/image1.1.jpg",
-    imgHover: "../images/image1.2.jpg",
+    img: "./images/image1.1.jpg",
+    imgHover: "./images/image1.2.jpg",
     text: `відчувати себе героєм фільму "Кладовище домашніх тварин" (ps а за вікном, на хвилиночку, другий поверх)`,
   },
   {
