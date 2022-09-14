@@ -21,13 +21,13 @@ body {
   align-content: center;
   flex-wrap: wrap;
 }
-header .header__menu {
+.header__menu {
   display: flex;
   justify-content: space-evenly;
   border: 1px solid transparent;
   flex-direction: column;
 }
-header .header__items {
+.header__items {
   display: flex;
   list-style: none;
   justify-content: space-between;
@@ -35,10 +35,10 @@ header .header__items {
   flex-direction: column;
   border: 1px solid transparent;
 }
-header .header__item {
+.header__item {
   margin: 5px;
 }
-header .header__item-link {
+.header__item-link {
   text-decoration: none;
   font-size: 3.5vw;
   font-family: DayWithoutSun;
@@ -49,27 +49,17 @@ header .header__item-link {
   color: #696969;
   border: 1px solid transparent;
 }
-header .header__item-link:hover {
+.header__item-link:hover {
   color: white;
   text-decoration: underline;
   text-underline-offset: 20%;
 }
-.title {
-  /* margin: 200px 0;} */
-}
-.image {
+.container__image {
   border: 1px solid #696969;
   width: 30vmax;
   height: 30vmax;
   border-radius: 50%;
   background-image: url("../images/imageCover.jpg");
-  background-size: cover;
-}
-.image:hover {
-  border: 1px solid #696969;
-  width: 30vmax;
-  height: 30vmax;
-  border-radius: 50%;
   background-size: cover;
 }
 .container {
@@ -83,7 +73,7 @@ header .header__item-link:hover {
   justify-content: center;
   flex-wrap: wrap;
 }
-.text {
+.container__text {
   width: 45vw;
   height: 15vh;
   border: 1px solid transparent;

@@ -52,10 +52,9 @@ const content = [
     img: '"./images/image9.1.jpg"',
     imgHover: '"./images/image9.2.jpg"',
     text: "дуже багато милоти... і крінжі",
-  },
+  }
 ];
-
-let imageReplace = document.querySelector(".image");
+let imageReplace = document.querySelector(".container__image");
 let textReplace = document.querySelector("p");
 let navClass = document.getElementsByClassName("header__item");
 
@@ -63,11 +62,13 @@ for (let i = 0; i < navClass.length; i++) {
   navClass[i].addEventListener("click", () => {
     textReplace.innerText = content[i].text;
     imageReplace.style.backgroundImage = `url(${content[i].img})`;
+
     imageReplace.addEventListener("mouseover", () => {
-      imageReplace.style.backgroundImage = `url(${content[i].imgHover})`;
+    imageReplace.style.backgroundImage = `url(${content[i].imgHover})`;
     });
+
     imageReplace.addEventListener("mouseout", () => {
-      imageReplace.style.backgroundImage = `url(${content[i].img})`;
+    imageReplace.style.backgroundImage = `url(${content[i].img})`;
     });
   });
 }
