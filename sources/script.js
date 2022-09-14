@@ -49,19 +49,11 @@ const content = [
   },
   {
     id: "8",
-    img: "./images/image9.1.jpg",
-    imgHover: "./images/image9.2.jpg",
+    img: '"./images/image9.1.jpg"',
+    imgHover: '"./images/image9.2.jpg"',
     text: "дуже багато милоти... і крінжі",
   },
 ];
-function extractValue(arr, prop) {
-  let extractedValue = arr.map((item) => item[prop]);
-  return extractedValue;
-}
-const extractedId = extractValue(content, "id");
-const extractedImg = extractValue(content, "img");
-const extractedImgHover = extractValue(content, "imgHover");
-const extractedText = extractValue(content, "text");
 
 let imageReplace = document.querySelector(".image");
 let textReplace = document.querySelector("p");
@@ -69,13 +61,13 @@ let navClass = document.getElementsByClassName("header__item");
 
 for (let i = 0; i < navClass.length; i++) {
   navClass[i].addEventListener("click", () => {
-    textReplace.innerText = `${extractedText[i]}`;
-    imageReplace.style.backgroundImage = `url(${extractedImg[i]})`;
+    textReplace.innerText = content[i].text;
+    imageReplace.style.backgroundImage = `url(${content[i].img})`;
     imageReplace.addEventListener("mouseover", () => {
-      imageReplace.style.backgroundImage = `url(${extractedImgHover[i]})`;
+      imageReplace.style.backgroundImage = `url(${content[i].imgHover})`;
     });
     imageReplace.addEventListener("mouseout", () => {
-      imageReplace.style.backgroundImage = `url(${extractedImg[i]})`;
+      imageReplace.style.backgroundImage = `url(${content[i].img})`;
     });
   });
 }
